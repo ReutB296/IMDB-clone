@@ -7,6 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Trailer from './Trailer';
+import Header from './Header';
 
 
 
@@ -16,7 +17,7 @@ function App() {
   
   return (
     <div className="App">
-    {/* <h1>Asaf remote test</h1> */}
+    <Header />
    <Router>
         <MoviesProvider>
             <Trailers/>
