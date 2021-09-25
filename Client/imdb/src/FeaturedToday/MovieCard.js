@@ -23,11 +23,10 @@ export default function MovieCard({movieId, id, imgUrl, vote_average, original_t
         console.log('user ID: ', user.id);
         console.log('movie id: ', id);
 
-        //`/api/users/${userId}/wishlist/${movieId}`
         fetch(`/api/users/${userId}/wishlist/${movieId}`, {  
             method:'PUT',
             headers: {'Content-Type': 'application/json'},
-            //body: JSON.stringify(movieId, user)
+            'Accept': 'application/json'
           }).then(res => res.json()).then(mongoUser => {
               const user = {
                   ...mongoUser,
@@ -35,11 +34,9 @@ export default function MovieCard({movieId, id, imgUrl, vote_average, original_t
               }
               setUser(user);
           }) 
-
     }
 
       const isColored = user && user.wishlist && user.wishlist.includes(id);
-    //console.log('include movie: ', user.wishList.includes(157336));
     return(
     
         <div>

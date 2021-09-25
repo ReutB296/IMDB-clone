@@ -1,5 +1,6 @@
 .gallery {
-  grid-area: trailers;
+  /* grid-area: trailers; */
+  width: 1280px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -12,7 +13,7 @@
 }
 
 .active {
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
   display: flex;
 }
 

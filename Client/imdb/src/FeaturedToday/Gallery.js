@@ -5,11 +5,11 @@ import { MoviesContext } from "../MoviesContext";
 import { UserContext } from '../User.context';
 import MovieCard from "./MovieCard";
 import star from '../Images/YellowStar.png';
+import WishList from '../WishList/WishList';
 
 export default function Gallery(isColored) {
 
-    const {featured, fetchFeatured, fetchData, hasMore, sethasMore,
-           page, setPage} = useContext(MoviesContext);
+    const {featured, fetchData} = useContext(MoviesContext);
 
 
     return(
@@ -28,6 +28,7 @@ export default function Gallery(isColored) {
                     {featured.map(movie => <MovieCard  starSrc={star}
                     vote_average={movie.vote_average}
                     original_title={movie.original_title}
+                    id={movie.id}
                     movieId={`/MovieToday/${movie.id}`}
                     imgUrl={
                         `https://image.tmdb.org/t/p/w200/${movie.poster_path}`}

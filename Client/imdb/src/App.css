@@ -19,6 +19,7 @@ body,
 html {
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-color: black;
 }
 
 .grid-header {
